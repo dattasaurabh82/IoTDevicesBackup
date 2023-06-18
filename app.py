@@ -8,6 +8,7 @@ __version__ = "0.1.0"
 __license__ = "MIT"
 
 import time
+from datetime import datetime
 import json
 import urllib.request
 
@@ -26,7 +27,8 @@ def download_config(_config_file):
     """ Querry and download current configs from device addresses """
     print('Downloading current configs from tasmota devices ...')
     time.sleep(2)
-
+    now = datetime.now()
+    dt_string = now.strftime("%d_%m_%Y-%H:%M:%S_")
     counter = 0
     with open(_config_file) as json_file:
         data = json.load(json_file)
@@ -35,7 +37,7 @@ def download_config(_config_file):
             counter += 1
             # print(device["name"], device["addr"])
             url = cmd = 'http://' + device['addr'] + '/dl'
-            file_name = curr_dir + '/backups/' + device['name'] + '.dmp'
+            file_name = curr_dir + '/backups/' + dt_string + device['name'] + '.dmp'
             print('[' + str(counter) + '] ' + 'Downloading current config from: ' + url + ' as ' + file_name)
             urllib.request.urlretrieve(url, file_name)
 
