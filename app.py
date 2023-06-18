@@ -53,7 +53,7 @@ def main():
     """ Main entry point of the app """
     # Remove old files
     print("Removing old files ...")
-    os.system('backups/*.dmp')
+    os.system('rm /home/pi/IoTDevicesBackup/backups/*.dmp')
     time.sleep(2)
     
     download_config(config_file)
