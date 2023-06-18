@@ -38,11 +38,13 @@ def download_config(_config_file):
 def push_to_git():
     """ Pushes everything to the git """
     os.system('git add .')
-    os.system('git commit -m \"latest commit\"')
+    os.system('git commit -m \"latest backup\"')
+    os.system('git status')
+    os.system('git push -u origin main')
 
 def main():
     """ Main entry point of the app """
-    # download_config(config_file)
+    download_config(config_file)
     push_to_git()
 
 
