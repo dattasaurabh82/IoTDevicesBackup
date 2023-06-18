@@ -7,6 +7,7 @@ __author__ = "saurabh Datta"
 __version__ = "0.1.0"
 __license__ = "MIT"
 
+import time
 import json
 import urllib.request
 
@@ -23,6 +24,9 @@ import subprocess
 
 def download_config(_config_file):
     """ Querry and download current configs from device addresses """
+    print('Downloading current configs from tasmota devices ...')
+    time.sleep(2)
+
     counter = 0
     with open(_config_file) as json_file:
         data = json.load(json_file)
@@ -37,6 +41,9 @@ def download_config(_config_file):
 
 def push_to_git():
     """ Pushes everything to the git """
+    print('\nPushing to git ...\n')
+    time.sleep(2)
+
     os.system('git add .')
     os.system('git commit -m \"latest backup\"')
     os.system('git status')
@@ -44,6 +51,11 @@ def push_to_git():
 
 def main():
     """ Main entry point of the app """
+    # Remove old files
+    print("Removing old files ...")
+    os.system('backups/*.dmp')
+    time.sleep(2)
+    
     download_config(config_file)
     push_to_git()
 
