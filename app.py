@@ -31,7 +31,7 @@ def download_config(_config_file):
             counter += 1
             # print(device["name"], device["addr"])
             url = cmd = 'http://' + device['addr'] + '/dl'
-            file_name = curr_dir + '/' + device['name'] + '.dmp'
+            file_name = curr_dir + '/backups/' + device['name'] + '.dmp'
             print('[' + str(counter) + '] ' + 'Downloading current config from: ' + url + ' as ' + file_name)
             urllib.request.urlretrieve(url, file_name)
 
