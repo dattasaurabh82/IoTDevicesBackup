@@ -51,6 +51,10 @@
         {
             "name":"vintageBedLamp", 
             "addr":"192.168.1.232"
-        }
+        },
+	{
+	    "name":"LivingRoomCtrlPanel",
+	    "addr":"192.168.1.215"
+	}
     ]
 }
