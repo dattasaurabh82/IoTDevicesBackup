@@ -45,7 +45,7 @@ def push_to_git():
     """ Pushes everything to the git """
     print('\nPushing to git ...\n')
     time.sleep(2)
-
+    os.system('git pull')
     os.system('git add .')
     os.system('git commit -m \"latest backup\"')
     os.system('git status')
