@@ -39,7 +39,11 @@ def download_config(_config_file):
             url = cmd = 'http://' + device['addr'] + '/dl'
             file_name = curr_dir + '/backups/' + dt_string + device['name'] + '.dmp'
             print('[' + str(counter) + '] ' + 'Downloading current config from: ' + url + ' as ' + file_name)
-            urllib.request.urlretrieve(url, file_name)
+            try:
+                urllib.request.urlretrieve(url, file_name)
+            except Exception:
+                print('host unreachable ...')
+                continue
 
 def push_to_git():
     """ Pushes everything to the git """
