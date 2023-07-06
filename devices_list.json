@@ -26,7 +26,9 @@
         },
         {
             "name":"bookLamp", 
-            "addr":"192.168.1.112"
+            "addr":"192.168.1.112",
+	    "static":true,
+	    "status":"ok"
         },
         {
             "name":"solderingStn", 
@@ -34,35 +36,69 @@
         },
         {
             "name":"workshopHeadLamp",
-            "addr":"192.168.1.153"
+            "addr":"192.168.1.153",
+	    "static":true,
+	    "status":"ok"
         },
         {
             "name":"japLampPlug", 
-            "addr":"192.168.1.187"
+            "addr":"192.168.1.187",
+	    "static": true,
+	    "status":"ok"
         },
         {
             "name":"sonoffBedLamp", 
-            "addr":"192.168.1.195"
+            "addr":"192.168.1.197",
+	    "static":true,
+	    "status":"ok"
         },
         {
             "name":"workshopCeilingLamp", 
-            "addr":"192.168.1.225"
+            "addr":"192.168.1.225",
+	    "static":true,
+	    "status":"ok"
         },
         {
             "name":"vintageBedLamp", 
-            "addr":"192.168.1.232"
+            "addr":"192.168.1.232",
+	    "static":true,
+	    "status":"ok"
         },
 	{
+	    "name":"ESP32_door_sensor",
+	    "addr":"192.168.1.233",
+	    "static":true,
+	    "status":"ok" 
+	},
+	{
+	    "name":"motionSensor1",
+            "addr":"192.168.1.152",
+            "static":false,
+            "status":"router unable to set static"
+	},
+	{
+            "name":"securitycam_1_esp32",
+	    "addr":"192.168.1.122",
+	    "static":false,
+	    "status":"router unable to set static"
+	},
+	{
 	    "name":"LivingRoomCtrlPanel",
-	    "addr":"192.168.1.214"
+	    "addr":"192.168.1.214",
+	    "static":true,
+	    "status":"ok"
 	},
         {
             "name":"BedRoomCtrlPanel",
-            "addr":"192.168.1.155"
+            "addr":"192.168.1.155",
+	    "static":true,
+	    "status":"ok"
         },
 	{
             "name":"WorkshopCtrlPanel",
-            "addr":"192.168.1.215"
+            "addr":"192.168.1.215",
+	    "static": true,
+	    "status":"ok"
         }
     ]
 }
